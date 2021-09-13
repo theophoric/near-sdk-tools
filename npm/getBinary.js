@@ -13,6 +13,7 @@ function getPlatform() {
     }
     if (type === 'Linux' && arch === 'x64') return 'Linux';
     if (type === 'Darwin' && arch === 'x64') return 'Darwin';
+    if (type === 'Darwin' && arch === 'arm64') return 'Darwin';
 
     throw new Error(`Unsupported platform: ${type} ${arch}`);
 }
